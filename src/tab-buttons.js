@@ -1,27 +1,24 @@
 export default function createTabs(){
-    const headerDiv = document.getElementById('header');
-    const btnsDiv = document.createElement('div');
-    btnsDiv.className = 'btns-div';
+    const containerDiv = document.getElementById('container');
 
-    const title = document.createElement('h1');
-    title.textContent = "Tristan's Backyard BBQ";
+    const btnsDiv = document.createElement('div');
+    btnsDiv.className = 'btns';
 
     const homeBtn = document.createElement('button');
     homeBtn.textContent = 'HOME';
     homeBtn.id = 'home-btn';
 
+    const aboutBtn = document.createElement('button');
+    aboutBtn.textContent = 'DAILY SPECIALS';
+    aboutBtn.id = 'specials-btn';
+
     const menuBtn = document.createElement('button');
     menuBtn.textContent = "MENU";
     menuBtn.id = 'menu-btn';
 
-    const contactBtn = document.createElement('button');
-    contactBtn.textContent = 'CONTACT';
-    contactBtn.id = 'contact-btn';
-
     btnsDiv.appendChild(homeBtn);
+    btnsDiv.appendChild(aboutBtn);
     btnsDiv.appendChild(menuBtn);
-    btnsDiv.appendChild(contactBtn);
 
-    headerDiv.appendChild(title);
-    headerDiv.appendChild(btnsDiv);
+    containerDiv.appendChild(btnsDiv);
 }

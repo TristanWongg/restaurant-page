@@ -2,33 +2,170 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-body {
-    background-color: #fb923c;
+html, body, .background-div {
+    height: 100%;
 }
 
-#header{
-    background-color: #fdba74;
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: grayscale(30%);
+    opacity: .9;
+}
+
+#container{
+    position: absolute;
+    z-index: 1;
+}
+
+.btns{
     display: flex;
-    height: 80px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-}
-
-h1{
-    margin-left: 15px;
-    font-size: 3em;
-}
-
-.btns-div{
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
     gap: 5em;
-    margin-right: 15px;
+    padding: 20px;
 }
 
 button{
+    border: none;
+    background-color: transparent;
+    color: gold;
+    font-size: 1em;
+}
+
+button:hover{
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 0px 1px 0px gold;
+}
+
+.home-content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:gold;
+    margin: 30vh auto auto auto;
+    width: fit-content;
+}
+
+h1{
+    font-size: 5em;
+    padding: 0px 20px 0px 20px;
+    padding: 8px;
+}
+
+.specials-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 40px;
+    gap: 50px;
+}
+
+.special-description{
+    grid-column: 2/3;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 1px solid gold;
+    color: gold;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.special-description-text{
+    font-size: 1.1em;
+}
+
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: gold;
+    transform: scale(1);
+    border: 1px solid gold;
+    height: 11vh;
+    font-size: 2em;
     padding: 10px;
-    width: 100px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.menu-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 25px;
+    gap: 10px;
+    background-color: rgb(255, 215, 0, 0.85);
+}
+
+.menu-content > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-bottom: 10px double goldenrod;
+}
+
+.menu-content > div > h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+h5{
+    text-align: center;
+    font-style:italic;
+}
+
+.menu-content > div > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 20px;
+}
+
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;    
+    text-align: center;
+}
+
+.menu-item > h4 + p {
+    font-style: italic;
 }
